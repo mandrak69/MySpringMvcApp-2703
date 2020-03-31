@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="base-definition"
+		template="/WEB-INF/views/tiles/layout/defaultLayout.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="header"
+			value="/WEB-INF/views/tiles/template/defaultHeader.jsp"></put-attribute>
+		<put-attribute name="footer"
+			value="/WEB-INF/views/tiles/template/defaultFooter.jsp"></put-attribute>
+		<put-attribute name="menu"
+			value="/WEB-INF/views/tiles/template/defaultMenu.jsp"></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+	</definition>
+
+	<!-- index page -->
+	<definition name="index" extends="base-definition">
+		<put-attribute name="title" value="Index page"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/pages/index.jsp"></put-attribute>
+	</definition>
+	<!-- ##################################################################################### -->
+	<!-- CITY -->
+	<definition name="city/add" extends="base-definition">
+		<put-attribute name="title" value="Add city"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/pages/city/add.jsp"></put-attribute>
+	</definition>
+
+	<!-- ##################################################################################### -->
+	<!-- COMPANY -->
+	<definition name="company/add" extends="base-definition">
+		<put-attribute name="title" value="Add company"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/pages/company/add.jsp"></put-attribute>
+	</definition>
+
+	<!-- ##################################################################################### -->
+	<!-- BUSINESS PARTNER -->
+	<definition name="businessPartner/add"
+		extends="base-definition">
+		<put-attribute name="title" value="Add business partner"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/pages/businessPartner/add.jsp"></put-attribute>
+	</definition>
+
+	<definition name="businessPartner/add_confirm"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Confire to save business partner"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/pages/businessPartner/add_confirm.jsp"></put-attribute>
+	</definition>
+
+	<!-- ##################################################################################### -->
+	<!-- EXCEPTION -->
+	<definition name="error/globalException"
+		extends="base-definition">
+		<put-attribute name="title" value="Exception"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/pages/error/globalException.jsp"></put-attribute>
+	</definition>
+
+
+
+
+</tiles-definitions>
